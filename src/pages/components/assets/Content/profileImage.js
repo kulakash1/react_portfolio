@@ -1,25 +1,32 @@
 let count = 1;
 
-const profileImage = {
+const profileImage = [
+  {
     id: count++,
-    home: "home",
+    forPath: "home",
     imageName: "Profile Pic",
-    link: "../../../components/assets/image/Profile Pic/home/profile Img.jpeg",
-   
-//   {
-//     id: count++,
-//     home: "home",
-//     imageName: "Profile Pic",
-//     img: "../../../components/assets/image/Profile Pic/home/profile Img.jpeg",
-//     link: "../../../components/assets/image/Profile Pic/home/profile Img.jpeg",
-//   },
-//   {
-//     id: count++,
-//     about: "about",
-//     imageName: "Profile Pic",
-//     img: "https://picsum.photos/400/?grayscale",
-//     link: "#",
-//   },
-};
+    imagePath: "./assets/image/Profile Pic/home/Profile Img.jpeg",
+  },
+  {
+    id: count++,
+    forPath: "about",
+    imageName: "Profile Pic",
+    imagePath: "./assets/image/Profile Pic/about/Profile Img.jpeg",
+  },
+  {
+    id: count++,
+    forPath: "footer",
+    imageName: "Profile Pic",
+    imagePath: "./assets/image/Profile Pic/footer/Profile Img.jpeg",
+  },
+];
+
+// let id, forPath, imageName, imagePath;
+// profileImage.map(imgItem => {
+//     ({id, forPath, imageName, imagePath} = imgItem);
+    
+//     if(forPath=="home")
+//         console.log(imagePath);
+// });
 
 export { profileImage };

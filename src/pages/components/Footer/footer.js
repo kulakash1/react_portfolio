@@ -1,11 +1,10 @@
 import "./footer.css";
 import "https://kit.fontawesome.com/15696a5f7b.js";
 // import { icon } from '@fortawesome/fontawesome-svg-core/import.macro'
-// import 'https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap'
 
+import { profileImage } from "../../components/assets/Content/profileImage.js";
+let id, forPath, imageName, imagePath;
 
-// import { profileImage } from "../../components/assets/Content/profileImage.js";
-// const { id, home, imageName, link } = profileImage;
 
 const Footer = () => {
   return (
@@ -15,7 +14,7 @@ const Footer = () => {
         <div className="row">
           <div className="col-12 col-md-6 col-lg-3">
             <div className="text-center text-md-left">
-              <img
+              {/* <img
                 src={require("../assets/image/Profile Pic/home/Profile Img.jpeg")}
                 // src={require("../a")}
                 // src={require({link})}
@@ -24,7 +23,22 @@ const Footer = () => {
                 // alt={imageName}
                 alt="Profile Pic"
                 className="footer-section-image"
-              />
+              /> */}
+              {profileImage.map((imgItem) => {
+                ({ id, forPath, imageName, imagePath } = imgItem);
+
+                if (forPath === "footer") {
+                  return (
+                    <img
+                      src={imagePath}
+                      alt={imageName}
+                      className="footer-section-image"
+                      key={id}
+                    />
+                  );
+                }
+                return null; // Return null for non-"home" items
+              })}
               <div className="d-flex flex-row justify-content-center justify-content-md-start mt-3 mb-3">
                 {/* <!-- <div className="ecommerce-footer-section-icon-container">
                                 <a href="">

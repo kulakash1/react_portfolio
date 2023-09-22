@@ -1,12 +1,10 @@
 import "./About.css";
 import "bootstrap/dist/css/bootstrap.css";
-// import Home from '../../home/home.js';
-// import About from '../../About/About.js'
-// import 'https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap'
-// import React from "react";
-// import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-// import {Link} from 'react-router-dom';
 import Navbar1 from "../components/Navbar/navbar.js";
+
+import { profileImage } from "../components/assets/Content/profileImage.js";
+
+let id, forPath, imageName, imagePath;
 
 // // JS Code
 
@@ -87,13 +85,30 @@ const About = () => {
             <div className="d-flex flex-column justify-content-center col-12 col-md-6 order-md-2">
               <h1 className="main-point mb-3">Facts</h1>
               <h1 className="about-me-section-heading mb-3">About me</h1>
-              <img
-                src={require("../components/assets/image/Profile Pic/home/Profile Img.jpeg")}
+              {/* <img
+                // src={require("../components/assets/image/Profile Pic/home/Profile Img.jpeg")}
+                src="./assets/image/Profile Pic/about/Profile Img.jpeg"
                 // src={require({link})}
                 // alt={imageName}
                 alt="Profile Pic"
                 className="about-me-section-image d-md-none mb-3"
-              />
+              /> */}
+
+              {profileImage.map((imgItem) => {
+                ({ id, forPath, imageName, imagePath } = imgItem);
+
+                if (forPath === "about") {
+                  return (
+                    <img
+                      src={imagePath}
+                      alt={imageName}
+                      className="about-me-section-image d-md-none mb-3"
+                      key={id}
+                    />
+                  );
+                }
+                return null; // Return null for non-"home" items
+              })}
               <p className="description">
                 Hello! I'm Akash Kulshrestha, a passionate technologist and 2023
                 graduate from IIT Dhanbad with a BTech degree in Computer
@@ -111,13 +126,34 @@ const About = () => {
             </div>
 
             <div className="col-12 col-md-6 order-1 order-md-1 d-none d-md-block">
-              <img
-                src={require("../components/assets/image/Profile Pic/home/Profile Img.jpeg")}
+              {/* <img
+              // src={require("https://uploadnow.io/en/share?utm_medium=b5cc477e-969f-497d-aa26-87d7052e805f&utm_term=t")}
+                
+                // src={require("https://drive.google.com/file/d/1zSnrNiey4gRfOKJElrzf9S4mn-u3Ri0o/view?usp=drive_link")}
+                
+                // src={require("../components/assets/image/Profile Pic/home/Profile Img.jpeg")}
+                src="./assets/image/Profile Pic/about/Profile Img.jpeg"
                 // src={require({link})}
                 // alt={imageName}
                 alt="Profile Pic"
                 className="about-me-section-image"
-              />
+              /> */}
+
+              {profileImage.map((imgItem) => {
+                ({ id, forPath, imageName, imagePath } = imgItem);
+
+                if (forPath === "about") {
+                  return (
+                    <img
+                      src={imagePath}
+                      alt={imageName}
+                      className="about-me-section-image"
+                      key={id}
+                    />
+                  );
+                }
+                return null; // Return null for non-"home" items
+              })}
             </div>
           </div>
         </div>
