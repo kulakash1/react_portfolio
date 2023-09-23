@@ -1,22 +1,65 @@
-{/* <div className="col-12 col-md-6">
-            <div className="project-section-project-card mb-3">
-                <img src="Answer Correct Sum - Game/Answer Correct Sum.jpg" alt="Answer Correct Sum.jpg" className="project-card-img" />
-                <div className="p-3">
-                    <h3 className="project-type-heading">Web design</h3>
-                    <h1 className="project-heading">Answer Correct Sum</h1>
-                    <p className="project-description">Answer the correct sum for 2 two-digit numbers...</p>
-
-                    <a className="project-card-link" href="/Projects/Answer Correct Sum - Game/Answer Correct Sum.html">
-                        See Demo
-                        <svg width="16px" height="16px" viewBox="0 0 16 16" className="bi bi-arrow-right-short" fill="#cced00" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div> */}
-
 // let variables = ["id", "ProjectsName", "keyName", "certificateTitle","certificateType","forProjects"];
+// let keyValue,
+//   projectTitle,
+//   projectType,
+//   imageName,
+//   description,
+//   imagePath,
+//   hrefLink;
+
+
+
+
+
+
+
+// {PlacesVisited.map((keyItem) => {
+//   let keyValue,
+//     city,
+//     country,
+//     images,
+//     imageBasePath,
+//     description,
+//     imageName,
+//     reviews;
+//   ({
+//     keyValue,
+//     city,
+//     country,
+//     images,
+//     imageBasePath,
+//     description,
+//     imageName,
+//     reviews
+//   } = keyItem);
+//   // const valOfKey = `"projectsmade" - ${keyValue}`; // Combine id with keyName
+
+//   return (
+//     <div class="place-info">
+//             <h2>City, Country</h2>
+//             <p>description</p>
+//     </div>
+//   );
+//   //   }
+//   //   return null; // Return null for non-"home" items
+// })}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 let noOfProjects = 1;
 
@@ -28,8 +71,14 @@ const projectsmade = [
     forProjects: "Full Stack Web Development",
     imageName: "Answer Correct Sum",
     description: "Answer the correct sum for 2 two-digit numbers...",
+    // imagePath: "./assets/image/Projects/Web Development/"+{imageName}+".jpg",
     imagePath: "./assets/image/Projects/Web Development/Answer Correct Sum.jpg",
-    hrefLink: "/Projects/" + "Answer Correct Sum" + "/" + "Answer Correct Sum" + ".html",
+    hrefLink:
+      "/Projects/" +
+      "Answer Correct Sum" +
+      "/" +
+      "Answer Correct Sum" +
+      ".html",
   },
   {
     keyValue: noOfProjects++,
@@ -59,7 +108,8 @@ const projectsmade = [
     imageName: "Bookmark Maker",
     description: "Bookmark your favourite Websites on-the-go.",
     imagePath: "./assets/image/Projects/Web Development/Bookmark Maker.jpg",
-    hrefLink: "/Projects/" + "Bookmark Maker" + "/" + "Bookmark Maker" + ".html",
+    hrefLink:
+      "/Projects/" + "Bookmark Maker" + "/" + "Bookmark Maker" + ".html",
   },
   {
     keyValue: noOfProjects++,
@@ -67,7 +117,8 @@ const projectsmade = [
     projectType: "Web Development",
     forProjects: "Full Stack Web Development",
     imageName: "Button Maker",
-    description: "Customize your Button based on color, padding and font size...",
+    description:
+      "Customize your Button based on color, padding and font size...",
     imagePath: "./assets/image/Projects/Web Development/Button Maker.jpg",
     hrefLink: "/Projects/" + "Button Maker" + "/" + "Button Maker" + ".html",
   },
@@ -88,8 +139,14 @@ const projectsmade = [
     forProjects: "Full Stack Web Development",
     imageName: "Country Population Search Page",
     description: "Show Population of Country",
-    imagePath: "./assets/image/Projects/Web Development/Country Population Search Page.jpg",
-    hrefLink: "/Projects/" + "Country Population Search Page" + "/" + "Country Population Search Page" + ".html",
+    imagePath:
+      "./assets/image/Projects/Web Development/Country Population Search Page.jpg",
+    hrefLink:
+      "/Projects/" +
+      "Country Population Search Page" +
+      "/" +
+      "Country Population Search Page" +
+      ".html",
   },
   {
     keyValue: noOfProjects++,
@@ -98,8 +155,14 @@ const projectsmade = [
     forProjects: "Full Stack Web Development",
     imageName: "Custom Range Counter",
     description: "Enter your custom range(in seconds) to start the Time Count.",
-    imagePath: "./assets/image/Projects/Web Development/Custom Range Counter.jpg",
-    hrefLink: "/Projects/" + "Custom Range Counter" + "/" + "Custom Range Counter" + ".html",
+    imagePath:
+      "./assets/image/Projects/Web Development/Custom Range Counter.jpg",
+    hrefLink:
+      "/Projects/" +
+      "Custom Range Counter" +
+      "/" +
+      "Custom Range Counter" +
+      ".html",
   },
   {
     keyValue: noOfProjects++,
@@ -108,8 +171,14 @@ const projectsmade = [
     forProjects: "Full Stack Web Development",
     imageName: "Know Fact About a Number",
     description: "Give a number to input and get Interesting Facts about it.",
-    imagePath: "./assets/image/Projects/Web Development/Know Fact About a Number.jpg",
-    hrefLink: "/Projects/" + "Know Fact About a Number" + "/" + "Know Fact About a Number" + ".html",
+    imagePath:
+      "./assets/image/Projects/Web Development/Know Fact About a Number.jpg",
+    hrefLink:
+      "/Projects/" +
+      "Know Fact About a Number" +
+      "/" +
+      "Know Fact About a Number" +
+      ".html",
   },
   {
     keyValue: noOfProjects++,
@@ -117,9 +186,16 @@ const projectsmade = [
     projectType: "Web Development",
     forProjects: "Full Stack Web Development",
     imageName: "Random Color Generator",
-    description: "Generate random background color by clicking on the button...",
-    imagePath: "./assets/image/Projects/Web Development/Random Color Generator.jpg",
-    hrefLink: "/Projects/" + "Random Color Generator" + "/" + "Random Color Generator" + ".html",
+    description:
+      "Generate random background color by clicking on the button...",
+    imagePath:
+      "./assets/image/Projects/Web Development/Random Color Generator.jpg",
+    hrefLink:
+      "/Projects/" +
+      "Random Color Generator" +
+      "/" +
+      "Random Color Generator" +
+      ".html",
   },
   {
     keyValue: noOfProjects++,
@@ -128,8 +204,14 @@ const projectsmade = [
     forProjects: "Full Stack Web Development",
     imageName: "Random Joke Generator",
     description: "Generate random jokes whenever you want to laugh",
-    imagePath: "./assets/image/Projects/Web Development/Random Joke Generator.jpg",
-    hrefLink: "/Projects/" + "Random Joke Generator" + "/" + "Random Joke Generator" + ".html",
+    imagePath:
+      "./assets/image/Projects/Web Development/Random Joke Generator.jpg",
+    hrefLink:
+      "/Projects/" +
+      "Random Joke Generator" +
+      "/" +
+      "Random Joke Generator" +
+      ".html",
   },
   {
     keyValue: noOfProjects++,
@@ -139,7 +221,8 @@ const projectsmade = [
     imageName: "Seasons Switcher",
     description: "Switch between the seasons according to your mood...",
     imagePath: "./assets/image/Projects/Web Development/Seasons Switcher.jpg",
-    hrefLink: "/Projects/" + "Seasons Switcher" + "/" + "Seasons Switcher" + ".html",
+    hrefLink:
+      "/Projects/" + "Seasons Switcher" + "/" + "Seasons Switcher" + ".html",
   },
   {
     keyValue: noOfProjects++,
@@ -147,9 +230,11 @@ const projectsmade = [
     projectType: "Web Development",
     forProjects: "Full Stack Web Development",
     imageName: "Select Your Pet",
-    description: "Select Your Pet according to your liking...though I like them all :-)",
+    description:
+      "Select Your Pet according to your liking...though I like them all :-)",
     imagePath: "./assets/image/Projects/Web Development/Select Your Pet.jpg",
-    hrefLink: "/Projects/" + "Select Your Pet" + "/" + "Select Your Pet" + ".html",
+    hrefLink:
+      "/Projects/" + "Select Your Pet" + "/" + "Select Your Pet" + ".html",
   },
   {
     keyValue: noOfProjects++,
@@ -159,7 +244,8 @@ const projectsmade = [
     imageName: "Sizing an Image",
     description: "Increase or Decrease the size of the image...",
     imagePath: "./assets/image/Projects/Web Development/Sizing an Image.jpg",
-    hrefLink: "/Projects/" + "Sizing an Image" + "/" + "Sizing an Image" + ".html",
+    hrefLink:
+      "/Projects/" + "Sizing an Image" + "/" + "Sizing an Image" + ".html",
   },
   {
     keyValue: noOfProjects++,
@@ -169,7 +255,8 @@ const projectsmade = [
     imageName: "Speed Typing Test",
     description: "Test your Typing Speed with a Game",
     imagePath: "./assets/image/Projects/Web Development/Speed Typing Test.jpg",
-    hrefLink: "/Projects/" + "Speed Typing Test" + "/" + "Speed Typing Test" + ".html",
+    hrefLink:
+      "/Projects/" + "Speed Typing Test" + "/" + "Speed Typing Test" + ".html",
   },
   {
     keyValue: noOfProjects++,
@@ -177,7 +264,8 @@ const projectsmade = [
     projectType: "Web Development",
     forProjects: "Full Stack Web Development",
     imageName: "Tabs",
-    description: "Get description of the places by clicking on the tab of the place you like to get info...",
+    description:
+      "Get description of the places by clicking on the tab of the place you like to get info...",
     imagePath: "./assets/image/Projects/Web Development/Tabs.jpg",
     hrefLink: "/Projects/" + "Tabs" + "/" + "Tabs" + ".html",
   },
@@ -189,7 +277,8 @@ const projectsmade = [
     imageName: "Time Converter",
     description: "Converts Hours and minutes into Seconds",
     imagePath: "./assets/image/Projects/Web Development/Time Converter.jpg",
-    hrefLink: "/Projects/" + "Time Converter" + "/" + "Time Converter" + ".html",
+    hrefLink:
+      "/Projects/" + "Time Converter" + "/" + "Time Converter" + ".html",
   },
   {
     keyValue: noOfProjects++,
@@ -197,9 +286,11 @@ const projectsmade = [
     projectType: "Web Development",
     forProjects: "Full Stack Web Development",
     imageName: "Tip Calculator",
-    description: "Calculate the tip to be paid based on the percentage amount you set on the bill...",
+    description:
+      "Calculate the tip to be paid based on the percentage amount you set on the bill...",
     imagePath: "./assets/image/Projects/Web Development/Tip Calculator.jpg",
-    hrefLink: "/Projects/" + "Tip Calculator" + "/" + "Tip Calculator" + ".html",
+    hrefLink:
+      "/Projects/" + "Tip Calculator" + "/" + "Tip Calculator" + ".html",
   },
   {
     keyValue: noOfProjects++,
@@ -218,8 +309,14 @@ const projectsmade = [
     forProjects: "Full Stack Web Development",
     imageName: "Toggle Like and Unlike",
     description: "Click on the Like Button to make this cute dog Happy...",
-    imagePath: "./assets/image/Projects/Web Development/Toggle Like and Unlike.jpg",
-    hrefLink: "/Projects/" + "Toggle Like and Unlike" + "/" + "Toggle Like and Unlike" + ".html",
+    imagePath:
+      "./assets/image/Projects/Web Development/Toggle Like and Unlike.jpg",
+    hrefLink:
+      "/Projects/" +
+      "Toggle Like and Unlike" +
+      "/" +
+      "Toggle Like and Unlike" +
+      ".html",
   },
   {
     keyValue: noOfProjects++,
@@ -227,7 +324,8 @@ const projectsmade = [
     projectType: "Web Development",
     forProjects: "Full Stack Web Development",
     imageName: "Traffic Light",
-    description: "Click on the desired buttonn to change the traffic light accordingly...",
+    description:
+      "Click on the desired buttonn to change the traffic light accordingly...",
     imagePath: "./assets/image/Projects/Web Development/Traffic Light.jpg",
     hrefLink: "/Projects/" + "Traffic Light" + "/" + "Traffic Light" + ".html",
   },
@@ -238,8 +336,14 @@ const projectsmade = [
     forProjects: "Full Stack Web Development",
     imageName: "Wikipedia Search Application",
     description: "Integrated Wikipedia Search with an api",
-    imagePath: "./assets/image/Projects/Web Development/Wikipedia Search Application.jpg",
-    hrefLink: "/Projects/" + "Wikipedia Search Application" + "/" + "Wikipedia Search Application" + ".html",
+    imagePath:
+      "./assets/image/Projects/Web Development/Wikipedia Search Application.jpg",
+    hrefLink:
+      "/Projects/" +
+      "Wikipedia Search Application" +
+      "/" +
+      "Wikipedia Search Application" +
+      ".html",
   },
   // {
   //   keyValue: noOfProjects++,
@@ -251,10 +355,6 @@ const projectsmade = [
   //   imagePath: "./assets/image/Projects/Web Development/.jpg",
   //   hrefLink: "/Projects/" + "" + "/" + "" + ".html",
   // },
-  
 ];
 
-
-export {
-  projectsmade
-};
+export { projectsmade };
