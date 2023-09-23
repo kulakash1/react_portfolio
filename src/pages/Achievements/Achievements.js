@@ -2,6 +2,16 @@ import "./Achievements.css";
 import "bootstrap/dist/css/bootstrap.css";
 import Navbar1 from "../components/Navbar/navbar.js";
 
+import {
+  earnedCertificates,
+  fsWebDev,
+  pLang,
+  compProg,
+  corporateCompliance,
+} from "../components/assets/Content/dataAchievements.js";
+
+// let id, forPath, imageName, imagePath;
+
 const Achievements = () => {
   return (
     <div className="">
@@ -28,172 +38,211 @@ const Achievements = () => {
         </div>
     </div> --> */}
 
+      {/* <!-- ... (Previous HTML code remains the same) ... --> */}
 
-    {/* <!-- ... (Previous HTML code remains the same) ... --> */}
+      <main>
+        <section className="achievement-section">
+          <h2>Earned Certificates</h2>
 
-<main>
-    <section className="achievement-section">
-        <h2>Earned Certificates</h2>
+          {earnedCertificates.map((eachItem) => {
+            let id, achievementName, keyName;
+            ({ id, achievementName, keyName } = eachItem);
 
-        <h3>Full Stack Web Development</h3>
-        <div className="certificate-container">
+            const combinedKey = `${keyName} - ${id}`; // Combine id with keyName
+            return (
+              <div>
+                <h3 key={combinedKey}>{achievementName}</h3>
+                <div className="certificate-container">
+                  {/* WEB DEV */}
+                  {keyName === "fsWebDev" &&
+                    fsWebDev.map((keyItem) => {
+                      let certificateType;
+                      ({ certificateType } = keyItem);
+                      // certificate type 1,2,3
+                      if (certificateType === 1) {
+                        let keyValue,
+                          certificateTitle,
+                          imageName,
+                          issueDate,
+                          description,
+                          duration,
+                          imagePath,
+                          verificationLink;
+                        ({
+                          keyValue,
+                          certificateTitle,
+                          imageName,
+                          issueDate,
+                          description,
+                          duration,
+                          imagePath,
+                          verificationLink,
+                        } = keyItem);
+                        const valOfKey = `${keyName} - ${keyValue}`; // Combine id with keyName
 
-            
-            <div className="certificate" onclick="showCertificateDetails('Build Your Own Static Website', 'February 8, 2022', 'Web Development.', '55+ Hrs', '/Achievements/Certificates/Full Stack Web Development/Build Your Own Static Website.jpg', 'https://10xiitian.ccbp.in/certificate/ZSKZRZNPMD')">
-                <img src="/Achievements/Certificates/Full Stack Web Development/Build Your Own Static Website.jpg" alt="Certificate 1" />
-                <h3>Build Your Own Static Website</h3>
-                <p>Issue Date: February 8, 2022</p>
-                <p>Description: Web Development.</p>
-                <p>Duration: 55+ Hrs</p>
-            </div>
-            {/* <!-- Add more Web Dev certificates as needed --> */}
-            
-            <div className="certificate" onclick="showCertificateDetails('Build Your Own Responsive Website', 'July 7, 2023', 'Web Development.', '56+ Hrs', '/Achievements/Certificates/Full Stack Web Development/Build Your Own Responsive Website.jpg', 'https://10xiitian.ccbp.in/certificate/OMURCWPYQZ')">
-                <img src="/Achievements/Certificates/Full Stack Web Development/Build Your Own Responsive Website.jpg" alt="Certificate 2" />
-                <h3>Build Your Own Responsive Website</h3>
-                <p>Issue Date: July 7, 2023</p>
-                <p>Description: Web Development.</p>
-                <p>Duration: 56+ Hrs</p>
-            </div>
+                        return (
+                          <div
+                            className="certificate"
+                            onclick="showCertificateDetails('{certificateTitle}', '{issueDate}', '{description}', '{duration}', '{imagePath}', '{verificationLink}')"
+                            key={valOfKey}
+                          >
+                            <img src={imagePath} alt={imageName} />
+                            <h3>{certificateTitle}</h3>
+                            <p>Issue Date: {issueDate}</p>
+                            <p>Description: {description}</p>
+                            <p>Duration: {duration}</p>
+                          </div>
+                        );
+                      }
+                      //   }
+                      //   return null; // Return null for non-"home" items
+                    })}
 
-            <div className="certificate" onclick="showCertificateDetails('Build Your Own Dynamic Web Application', 'July 10, 2023', 'Web Development.', '104+ Hrs', '/Achievements/Certificates/Full Stack Web Development/Build Your Own Dynamic Web Application.jpg', 'https://10xiitian.ccbp.in/certificate/WUUZUWTUHT')">
-                <img src="/Achievements/Certificates/Full Stack Web Development/Build Your Own Dynamic Web Application.jpg" alt="Certificate 3" />
-                <h3>Build Your Own Dynamic Web Application</h3>
-                <p>Issue Date: July 10, 2023</p>
-                <p>Description: Web Development.</p>
-                <p>Duration: 104+ Hrs</p>
-            </div>
+                  {/* Programming Language */}
+                  {keyName === "pLang" &&
+                    pLang.map((keyItem) => {
+                      let certificateType;
+                      ({ certificateType } = keyItem);
+                      // certificate type 1,2,3
+                      if (certificateType === 1) {
+                        let keyValue,
+                          certificateTitle,
+                          imageName,
+                          issueDate,
+                          description,
+                          duration,
+                          imagePath,
+                          verificationLink;
+                        ({
+                          keyValue,
+                          certificateTitle,
+                          imageName,
+                          issueDate,
+                          description,
+                          duration,
+                          imagePath,
+                          verificationLink,
+                        } = keyItem);
+                        const valOfKey = `${keyName} - ${keyValue}`; // Combine id with keyName
 
-            <div className="certificate" onclick="showCertificateDetails('JavaScript Essentials', 'July 29, 2023', 'Web Development.', '46+ Hrs', '/Achievements/Certificates/Full Stack Web Development/JavaScript Essentials.jpg', 'https://10xiitian.ccbp.in/certificate/CZVNCEDFXF')">
-                <img src="/Achievements/Certificates/Full Stack Web Development/JavaScript Essentials.jpg" alt="Certificate 4" />
-                <h3>JavaScript Essentials</h3>
-                <p>Issue Date: July 29, 2023</p>
-                <p>Description: Web Development.</p>
-                <p>Duration: 46+ Hrs</p>
-            </div>
+                        return (
+                          <div
+                            className="certificate"
+                            onclick="showCertificateDetails('{certificateTitle}', '{issueDate}', '{description}', '{duration}', '{imagePath}', '{verificationLink}')"
+                            key={valOfKey}
+                          >
+                            <img src={imagePath} alt={imageName} />
+                            <h3>{certificateTitle}</h3>
+                            <p>Issue Date: {issueDate}</p>
+                            <p>Description: {description}</p>
+                            <p>Duration: {duration}</p>
+                          </div>
+                        );
+                      }
+                      //   }
+                      //   return null; // Return null for non-"home" items
+                    })}
 
-            <div className="certificate" onclick="showCertificateDetails('Introduction to Databases', 'August 8, 2023', 'Web Development.', '56+ Hrs', '/Achievements/Certificates/Full Stack Web Development/Introduction to Databases.jpg', 'https://10xiitian.ccbp.in/certificate/IPZEPHJTED')">
-                <img src="/Achievements/Certificates/Full Stack Web Development/Introduction to Databases.jpg" alt="Certificate 5" />
-                <h3>Introduction to Databases</h3>
-                <p>Issue Date: August 8, 2023</p>
-                <p>Description: Web Development.</p>
-                <p>Duration: 56+ Hrs</p>
-            </div>
+                  {/* Competitive Programming */}
+                  {keyName === "compProg" &&
+                    compProg.map((keyItem) => {
+                      let certificateType;
+                      ({ certificateType } = keyItem);
+                      // certificate type 1,2,3
+                      if (certificateType === 1) {
+                        let keyValue,
+                          certificateTitle,
+                          imageName,
+                          issueDate,
+                          description,
+                          duration,
+                          imagePath,
+                          verificationLink;
+                        ({
+                          keyValue,
+                          certificateTitle,
+                          imageName,
+                          issueDate,
+                          description,
+                          duration,
+                          imagePath,
+                          verificationLink,
+                        } = keyItem);
+                        const valOfKey = `${keyName} - ${keyValue}`; // Combine id with keyName
 
-            <div className="certificate" onclick="showCertificateDetails('Responsive Web Design using Flexbox', 'September 16, 2023', 'Web Development.', '42+ Hrs', '/Achievements/Certificates/Full Stack Web Development/Responsive Web Design using Flexbox.jpg', 'https://10xiitian.ccbp.in/certificate/CFYRPSNPVN')">
-                <img src="/Achievements/Certificates/Full Stack Web Development/Responsive Web Design using Flexbox.jpg" alt="Certificate 6" />
-                <h3>Responsive Web Design using Flexbox</h3>
-                <p>Issue Date: September 16, 2023</p>
-                <p>Description: Web Development.</p>
-                <p>Duration: 42+ Hrs</p>
-            </div>
+                        return (
+                          <div
+                            className="certificate"
+                            onclick="showCertificateDetails('{certificateTitle}', '{issueDate}', '{description}', '{duration}', '{imagePath}', '{verificationLink}')"
+                            key={valOfKey}
+                          >
+                            <img src={imagePath} alt={imageName} />
+                            <h3>{certificateTitle}</h3>
+                            <p>Issue Date: {issueDate}</p>
+                            <p>Description: {description}</p>
+                            <p>Duration: {duration}</p>
+                          </div>
+                        );
+                      }
+                      //   }
+                      //   return null; // Return null for non-"home" items
+                    })}
 
-            <div className="certificate" onclick="showCertificateDetails('Node JS', 'September 19, 2023', 'Web Development.', '42+ Hrs', '/Achievements/Certificates/Full Stack Web Development/Node JS.jpg', 'https://10xiitian.ccbp.in/certificate/QUIOYCPWZH')">
-                <img src="/Achievements/Certificates/Full Stack Web Development/Node JS.jpg" alt="Certificate 7" />
-                <h3>Node JS</h3>
-                <p>Issue Date: September 19, 2023</p>
-                <p>Description: Web Development.</p>
-                <p>Duration: 42+ Hrs</p>
-            </div>
+                  {/* Corporate Compliance */}
+                  {keyName === "corporateCompliance" &&
+                    corporateCompliance.map((keyItem) => {
+                      let certificateType;
+                      ({ certificateType } = keyItem);
+                      // certificate type 1,2,3
+                      if (certificateType === 2) {
+                        let keyValue,
+                          certificateTitle,
+                          imageName,
+                          issueDate,
+                          description,
+                          issuedBy,
+                          imagePath,
+                          certificationNo;
+                        ({
+                          keyValue,
+                          certificateTitle,
+                          imageName,
+                          issueDate,
+                          description,
+                          issuedBy,
+                          imagePath,
+                          certificationNo,
+                        } = keyItem);
+                        const valOfKey = `${keyName} - ${keyValue}`; // Combine id with keyName
 
-            {/* <!-- <div className="certificate" onclick="showCertificateDetails('React JS - Getting started', 'September 22, 2023', 'Web Development.', '42+ Hrs', '/Achievements/Certificates/Full Stack Web Development/React JS - Getting started.jpg', 'ht')">
-                <img src="/Achievements/Certificates/Full Stack Web Development/React JS - Getting started.jpg" alt="Certificate 8" />
-                <h3>React JS - Getting started</h3>
-                <p>Issue Date: September 22, 2023</p>
-                <p>Description: Web Development.</p>
-                <p>Duration: 42+ Hrs</p>
-            </div> --> */}
-        </div>
-
-        <h3>Programming Language</h3>
-        <div className="certificate-container">
-            <div className="certificate-container">
-                <div className="certificate" onclick="showCertificateDetails('Python & OOP Concepts', 'February 12, 2022', 'Python Concepts.', '57+ Hrs', '/Achievements/Certificates/Programming Language/Python & OOP Concepts.jpg', 'https://10xiitian.ccbp.in/certificate/EXSGOWJFSE')">
-                    <img src="/Achievements/Certificates/Programming Language/Python & OOP Concepts.jpg" alt="Certificate 1" />
-                    <h3>Python & OOP Concepts</h3>
-                    <p>Issue Date: February 12, 2022</p>
-                    <p>Description: Python Concepts.</p>
-                    <p>Duration: 57+ Hrs</p>
+                        return (
+                          <div
+                            className="certificate"
+                            onclick="showCertificateDetailsType2('{certificateTitle}', '{issueDate}', '{description}', '{certificationNo}', '{imagePath}', '{issuedBy}')"
+                            key={valOfKey}
+                          >
+                            <img src={imagePath} alt={imageName} />
+                            <h3>{certificateTitle}</h3>
+                            <p>Issue Date: {issueDate}</p>
+                            <p>Description: {description}</p>
+                            <p>Certification No.: {certificationNo}</p>
+                          </div>
+                        );
+                      }
+                      //   }
+                      //   return null; // Return null for non-"home" items
+                    })}
                 </div>
-                {/* <!-- Add more Competi certificates as needed --> */}
-                <div className="certificate" onclick="showCertificateDetails('C++ and Foundations of STL', 'October 9, 2022', 'C++.', '15+ Hrs', '/Achievements/Certificates/Programming Language/C++ and Foundations of STL.jpg', 'https://10xiitian.ccbp.in/certificate/VWQJVAFLJA')">
-                    <img src="/Achievements/Certificates/Programming Language/C++ and Foundations of STL.jpg" alt="Certificate 3" /> 
-                    {/* <!-- Changed alt attribute to "Certificate 3" --> */}
-                    <h3>C++ and Foundations of STL</h3>
-                    <p>Issue Date: October 9, 2022</p>
-                    <p>Description: C++.</p>
-                    <p>Duration: 15+ Hrs</p>
-                </div>
-            </div>
-        </div>
+              </div>
+            );
+          })}
 
-        <h3>Competitive Programming</h3>
-        <div className="certificate-container">
-            <div className="certificate-container">
-                <div className="certificate" onclick="showCertificateDetails('Elementary Data Structures and Algorithms', 'February 13, 2022', 'DSA Fundamentals.', '29+ Hrs', '/Achievements/Certificates/Competitive Programming/Elementary Data Structures and Algorithms.jpg', 'https://10xiitian.ccbp.in/certificate/ZHXOQGMJWU')">
-                    <img src="/Achievements/Certificates/Competitive Programming/Elementary Data Structures and Algorithms.jpg" alt="Certificate 2" />
-                    <h3>Elementary Data Structures and Algorithms</h3>
-                    <p>Issue Date: February 13, 2022</p>
-                    <p>Description: DSA Fundamentals.</p>
-                    <p>Duration: 29+ Hrs</p>
-                </div>
-                {/* <!-- Add more Competi certificates as needed --> */}
-                <div className="certificate" onclick="showCertificateDetails('C++ and Foundations of STL', 'October 9, 2022', 'C++.', '15+ Hrs', '/Achievements/Certificates/Competitive Programming/C++ and Foundations of STL.jpg', 'https://10xiitian.ccbp.in/certificate/VWQJVAFLJA')">
-                    <img src="/Achievements/Certificates/Competitive Programming/C++ and Foundations of STL.jpg" alt="Certificate 3" /> 
-                    {/* <!-- Changed alt attribute to "Certificate 3" --> */}
-                    <h3>C++ and Foundations of STL</h3>
-                    <p>Issue Date: October 9, 2022</p>
-                    <p>Description: C++.</p>
-                    <p>Duration: 15+ Hrs</p>
-                </div>
-            </div>
-        </div>
+        </section>
+      </main>
 
-        
-        <h3>Corporate Compliance</h3>
-        <div className="certificate-container">
-            <div className="certificate-container">
-                <div className="certificate" onclick="showCertificateDetailsType2('Corporate Etiquette', 'May 5, 2022', 'Corporate Training.', 'E-202205-176223', '/Achievements/Certificates/Corporate Compliance/Corporate Etiquette.jpg', 'Learning and Development')">
-                    <img src="/Achievements/Certificates/Corporate Compliance/Corporate Etiquette.jpg" alt="Certificate 1" />
-                    <h3>Corporate Etiquette</h3>
-                    <p>Issue Date: May 5, 2022</p>
-                    <p>Description: Corporate Training.</p>
-                    <p>Certification No.: E-202205-176223</p>
-                </div>
-                {/* <!-- Add more Competi certificates as needed --> */}
-                <div className="certificate" onclick="showCertificateDetailsType2('Business Ethics', 'May 9, 2022', 'Corporate Training.', 'E-202205-176750', '/Achievements/Certificates/Corporate Compliance/Business Ethics.jpg', 'Learning and Development')">
-                    <img src="/Achievements/Certificates/Corporate Compliance/Business Ethics.jpg" alt="Certificate 2" />
-                    <h3>Business Ethics</h3>
-                    <p>Issue Date: May 9, 2022</p>
-                    <p>Description: Corporate Training.</p>
-                    <p>Certification No.: E-202205-176750</p>
-                </div>
-
-                <div className="certificate" onclick="showCertificateDetailsType2('NBSO', 'May 9, 2022', 'Corporate Training.', 'E-202205-176744', '/Achievements/Certificates/Corporate Compliance/NBSO.jpg', 'Learning and Development')">
-                    <img src="/Achievements/Certificates/Corporate Compliance/NBSO.jpg" alt="Certificate 3" />
-                    <h3>NBSO</h3>
-                    <p>Issue Date: May 9, 2022</p>
-                    <p>Description: Corporate Training.</p>
-                    <p>Certification No.: E-202205-176744</p>
-                </div>
-
-                <div className="certificate" onclick="showCertificateDetailsType2('POSH', 'May 9, 2022', 'Corporate Training.', 'E-202205-176747', '/Achievements/Certificates/Corporate Compliance/POSH.jpg', 'Learning and Development')">
-                    <img src="/Achievements/Certificates/Corporate Compliance/POSH.jpg" alt="Certificate 4" />
-                    <h3>POSH</h3>
-                    <p>Issue Date: May 9, 2022</p>
-                    <p>Description: Corporate Training.</p>
-                    <p>Certification No.: E-202205-176747</p>
-                </div>
-            </div>
-        </div>
-
-        
-    </section>
-</main>
- 
- {/* // Modal Part  Commented*/}
-{/* <!-- ... (Remaining HTML code remains the same) ... --> */}
-{/*<div className="modal" id="certificateModal">
+      {/* // Modal Part  Commented*/}
+      {/* <!-- ... (Remaining HTML code remains the same) ... --> */}
+      {/*<div className="modal" id="certificateModal">
     <div className="modal-content">
         <span className="close-button" onclick="closeModal()">&times;</span>
         <div id="modalContent">
@@ -204,13 +253,9 @@ const Achievements = () => {
 </div>
 */}
 
+      {/* <!-- ... (Previous HTML code remains the same) ... --> */}
 
-
-
-
-    {/* <!-- ... (Previous HTML code remains the same) ... --> */}
-
-    {/* <!-- <div className="modal" id="certificateModal">
+      {/* <!-- <div className="modal" id="certificateModal">
         <div className="modal-content">
           <span className="close-button" onclick="closeModal()">&times;</span>
           <div id="modalContent">
@@ -218,10 +263,8 @@ const Achievements = () => {
           </div>
         </div>
       </div> --> */}
-      
-    
 
-{/* <!-- ... (Remaining HTML code remains the same) ... --> */}
+      {/* <!-- ... (Remaining HTML code remains the same) ... --> */}
 
       {/* <!-- NEED TO UPDATE !--> */}
       {/* <!-- 
@@ -234,15 +277,12 @@ const Achievements = () => {
         </div>
       </div> 
     --> */}
-
-      
     </div>
   );
 };
 
 export default Achievements;
 // export { Achievements };
-
 
 // // JS Code
 
@@ -255,10 +295,6 @@ export default Achievements;
 //     modalContent.innerHTML = "";
 //   }
 // };
-
-
-
-
 
 // function showCertificateDetails(title, issueDate, description, duration, imageUrl, verificationLink) {
 //   const modal = document.getElementById("certificateModal");
@@ -284,7 +320,6 @@ export default Achievements;
 //   const durationElement = document.createElement("p"); // Added duration element
 //   durationElement.innerHTML = `<strong>Duration:</strong> ${duration}`;
 
-
 //   const descriptionElement = document.createElement("p");
 //   descriptionElement.innerHTML = `<strong>Description:</strong> ${description}`;
 
@@ -302,7 +337,6 @@ export default Achievements;
 
 //   modal.style.display = "block";
 // }
-
 
 // function showCertificateDetailsType2(title, issueDate, description, certificationNo, imageUrl, issuedBy) {
 //   const modal = document.getElementById("certificateModal");
@@ -327,7 +361,6 @@ export default Achievements;
 
 //   const certificationNoElement = document.createElement("p"); // Added certificationNo element
 //   certificationNoElement.innerHTML = `<strong>Certification No.:</strong> ${certificationNo}`;
-
 
 //   const descriptionElement = document.createElement("p");
 //   descriptionElement.innerHTML = `<strong>Description:</strong> ${description}`;
@@ -354,12 +387,11 @@ export default Achievements;
 //   // const fullImg = document.getElementById("fullCertificateImg");
 //   const modalContent = document.getElementById("modalContent");
 //   modalContent.innerHTML = "";
-  
+
 //   // modal.removeChild(modalContent);
-  
+
 //   // fullImg.src = "";
 // }
-
 
 // // DOMContentLoaded event listener is not required here
 
