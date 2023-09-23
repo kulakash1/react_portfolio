@@ -5,46 +5,7 @@
 //   imageName,
 //   description,
 //   imagePath,
-//   hrefLink;
-
-
-
-
-
-
-
-// {PlacesVisited.map((keyItem) => {
-//   let keyValue,
-//     city,
-//     country,
-//     images,
-//     imageBasePath,
-//     description,
-//     imageName,
-//     reviews;
-//   ({
-//     keyValue,
-//     city,
-//     country,
-//     images,
-//     imageBasePath,
-//     description,
-//     imageName,
-//     reviews
-//   } = keyItem);
-//   // const valOfKey = `"projectsmade" - ${keyValue}`; // Combine id with keyName
-
-//   return (
-//     <div class="place-info">
-//             <h2>City, Country</h2>
-//             <p>description</p>
-//     </div>
-//   );
-//   //   }
-//   //   return null; // Return null for non-"home" items
-// })}
-
-
+//   projectPathLocally;
 
 
 
@@ -73,12 +34,13 @@ const projectsmade = [
     description: "Answer the correct sum for 2 two-digit numbers...",
     // imagePath: "./assets/image/Projects/Web Development/"+{imageName}+".jpg",
     imagePath: "./assets/image/Projects/Web Development/Answer Correct Sum.jpg",
-    hrefLink:
+    projectPathLocally:
       "/Projects/" +
       "Answer Correct Sum" +
       "/" +
       "Answer Correct Sum" +
       ".html",
+      hrefLink: "https://kulakash1.netlify.app/projects/answer%20correct%20sum%20-%20game/answer%20correct%20sum",
   },
   {
     keyValue: noOfProjects++,
@@ -88,7 +50,8 @@ const projectsmade = [
     imageName: "Bomb Defuser",
     description: "Defuse the BOMB before it blast.",
     imagePath: "./assets/image/Projects/Web Development/Bomb Defuser.jpg",
-    hrefLink: "/Projects/" + "Bomb Defuser" + "/" + "Bomb Defuser" + ".html",
+    projectPathLocally: "/Projects/" + "Bomb Defuser" + "/" + "Bomb Defuser" + ".html",
+    hrefLink: "https://kulakash1.netlify.app/projects/bomb%20defuser/bomb%20defuser",
   },
   {
     keyValue: noOfProjects++,
@@ -98,7 +61,8 @@ const projectsmade = [
     imageName: "Book Search",
     description: "Search your favourite Book on-the-go.",
     imagePath: "./assets/image/Projects/Web Development/Book Search.jpg",
-    hrefLink: "/Projects/" + "Book Search" + "/" + "Book Search" + ".html",
+    projectPathLocally: "/Projects/" + "Book Search" + "/" + "Book Search" + ".html",
+    hrefLink: "https://kulakash1.netlify.app/Projects/Book%20Search/Book%20Search.html",
   },
   {
     keyValue: noOfProjects++,
@@ -108,8 +72,9 @@ const projectsmade = [
     imageName: "Bookmark Maker",
     description: "Bookmark your favourite Websites on-the-go.",
     imagePath: "./assets/image/Projects/Web Development/Bookmark Maker.jpg",
-    hrefLink:
+    projectPathLocally:
       "/Projects/" + "Bookmark Maker" + "/" + "Bookmark Maker" + ".html",
+      hrefLink: "https://kulakash1.netlify.app/Projects/Bookmark%20Maker/Bookmark%20Maker.html",
   },
   {
     keyValue: noOfProjects++,
@@ -120,7 +85,8 @@ const projectsmade = [
     description:
       "Customize your Button based on color, padding and font size...",
     imagePath: "./assets/image/Projects/Web Development/Button Maker.jpg",
-    hrefLink: "/Projects/" + "Button Maker" + "/" + "Button Maker" + ".html",
+    projectPathLocally: "/Projects/" + "Button Maker" + "/" + "Button Maker" + ".html",
+    hrefLink: "https://kulakash1.netlify.app/Projects/Button%20Maker/Button%20Maker.html",
   },
   {
     keyValue: noOfProjects++,
@@ -130,7 +96,8 @@ const projectsmade = [
     imageName: "Color Picker",
     description: "Pick any color to change the background color...",
     imagePath: "./assets/image/Projects/Web Development/Color Picker.jpg",
-    hrefLink: "/Projects/" + "Color Picker" + "/" + "Color Picker" + ".html",
+    projectPathLocally: "/Projects/" + "Color Picker" + "/" + "Color Picker" + ".html",
+    hrefLink: "https://kulakash1.netlify.app/Projects/Color%20Picker/Color%20Picker.html",
   },
   {
     keyValue: noOfProjects++,
@@ -141,12 +108,13 @@ const projectsmade = [
     description: "Show Population of Country",
     imagePath:
       "./assets/image/Projects/Web Development/Country Population Search Page.jpg",
-    hrefLink:
+    projectPathLocally:
       "/Projects/" +
       "Country Population Search Page" +
       "/" +
       "Country Population Search Page" +
       ".html",
+      hrefLink: "https://kulakash1.netlify.app/Projects/Country%20Population%20Search%20Page/Country%20Population%20Search%20Page.html",
   },
   {
     keyValue: noOfProjects++,
@@ -157,12 +125,13 @@ const projectsmade = [
     description: "Enter your custom range(in seconds) to start the Time Count.",
     imagePath:
       "./assets/image/Projects/Web Development/Custom Range Counter.jpg",
-    hrefLink:
+    projectPathLocally:
       "/Projects/" +
       "Custom Range Counter" +
       "/" +
       "Custom Range Counter" +
       ".html",
+      hrefLink: "https://kulakash1.netlify.app/projects/Custom%20Range%20Counter/Custom%20Range%20Counter.html",
   },
   {
     keyValue: noOfProjects++,
@@ -173,12 +142,13 @@ const projectsmade = [
     description: "Give a number to input and get Interesting Facts about it.",
     imagePath:
       "./assets/image/Projects/Web Development/Know Fact About a Number.jpg",
-    hrefLink:
+    projectPathLocally:
       "/Projects/" +
       "Know Fact About a Number" +
       "/" +
       "Know Fact About a Number" +
       ".html",
+      hrefLink: "https://kulakash1.netlify.app/Projects/Know%20Fact%20About%20a%20Number/Know%20Fact%20About%20a%20Number.html",
   },
   {
     keyValue: noOfProjects++,
@@ -190,12 +160,13 @@ const projectsmade = [
       "Generate random background color by clicking on the button...",
     imagePath:
       "./assets/image/Projects/Web Development/Random Color Generator.jpg",
-    hrefLink:
+    projectPathLocally:
       "/Projects/" +
       "Random Color Generator" +
       "/" +
       "Random Color Generator" +
       ".html",
+      hrefLink: "https://kulakash1.netlify.app/Projects/Random%20Color%20Generator/Random%20Color%20Generator.html",
   },
   {
     keyValue: noOfProjects++,
@@ -206,12 +177,13 @@ const projectsmade = [
     description: "Generate random jokes whenever you want to laugh",
     imagePath:
       "./assets/image/Projects/Web Development/Random Joke Generator.jpg",
-    hrefLink:
+    projectPathLocally:
       "/Projects/" +
       "Random Joke Generator" +
       "/" +
       "Random Joke Generator" +
       ".html",
+      hrefLink: "https://kulakash1.netlify.app/Projects/Random%20Joke%20Generator/Random%20Joke%20Generator.html",
   },
   {
     keyValue: noOfProjects++,
@@ -221,8 +193,9 @@ const projectsmade = [
     imageName: "Seasons Switcher",
     description: "Switch between the seasons according to your mood...",
     imagePath: "./assets/image/Projects/Web Development/Seasons Switcher.jpg",
-    hrefLink:
+    projectPathLocally:
       "/Projects/" + "Seasons Switcher" + "/" + "Seasons Switcher" + ".html",
+      hrefLink: "https://kulakash1.netlify.app/Projects/Seasons%20Switcher/Seasons%20Switcher.html",
   },
   {
     keyValue: noOfProjects++,
@@ -233,8 +206,9 @@ const projectsmade = [
     description:
       "Select Your Pet according to your liking...though I like them all :-)",
     imagePath: "./assets/image/Projects/Web Development/Select Your Pet.jpg",
-    hrefLink:
+    projectPathLocally:
       "/Projects/" + "Select Your Pet" + "/" + "Select Your Pet" + ".html",
+      hrefLink: "https://kulakash1.netlify.app/Projects/Select%20Your%20Pet/Select%20Your%20Pet.html",
   },
   {
     keyValue: noOfProjects++,
@@ -244,8 +218,9 @@ const projectsmade = [
     imageName: "Sizing an Image",
     description: "Increase or Decrease the size of the image...",
     imagePath: "./assets/image/Projects/Web Development/Sizing an Image.jpg",
-    hrefLink:
+    projectPathLocally:
       "/Projects/" + "Sizing an Image" + "/" + "Sizing an Image" + ".html",
+      hrefLink: "https://kulakash1.netlify.app/Projects/Sizing%20an%20Image/Sizing%20an%20Image.html",
   },
   {
     keyValue: noOfProjects++,
@@ -255,8 +230,9 @@ const projectsmade = [
     imageName: "Speed Typing Test",
     description: "Test your Typing Speed with a Game",
     imagePath: "./assets/image/Projects/Web Development/Speed Typing Test.jpg",
-    hrefLink:
+    projectPathLocally:
       "/Projects/" + "Speed Typing Test" + "/" + "Speed Typing Test" + ".html",
+      hrefLink: "https://kulakash1.netlify.app/Projects/Speed%20Typing%20Test/Speed%20Typing%20Test.html",
   },
   {
     keyValue: noOfProjects++,
@@ -267,7 +243,8 @@ const projectsmade = [
     description:
       "Get description of the places by clicking on the tab of the place you like to get info...",
     imagePath: "./assets/image/Projects/Web Development/Tabs.jpg",
-    hrefLink: "/Projects/" + "Tabs" + "/" + "Tabs" + ".html",
+    projectPathLocally: "/Projects/" + "Tabs" + "/" + "Tabs" + ".html",
+    hrefLink: "https://kulakash1.netlify.app/projects/tabs/tabs",
   },
   {
     keyValue: noOfProjects++,
@@ -277,8 +254,9 @@ const projectsmade = [
     imageName: "Time Converter",
     description: "Converts Hours and minutes into Seconds",
     imagePath: "./assets/image/Projects/Web Development/Time Converter.jpg",
-    hrefLink:
+    projectPathLocally:
       "/Projects/" + "Time Converter" + "/" + "Time Converter" + ".html",
+      hrefLink: "https://kulakash1.netlify.app/Projects/Time%20Converter/Time%20Converter.html",
   },
   {
     keyValue: noOfProjects++,
@@ -289,8 +267,9 @@ const projectsmade = [
     description:
       "Calculate the tip to be paid based on the percentage amount you set on the bill...",
     imagePath: "./assets/image/Projects/Web Development/Tip Calculator.jpg",
-    hrefLink:
+    projectPathLocally:
       "/Projects/" + "Tip Calculator" + "/" + "Tip Calculator" + ".html",
+      hrefLink: "https://kulakash1.netlify.app/Projects/Tip%20Calculator/Tip%20Calculator.html",
   },
   {
     keyValue: noOfProjects++,
@@ -300,7 +279,8 @@ const projectsmade = [
     imageName: "To Do List",
     description: "Make your own To-do Items list...",
     imagePath: "./assets/image/Projects/Web Development/To Do List.jpg",
-    hrefLink: "/Projects/" + "To Do List" + "/" + "To Do List" + ".html",
+    projectPathLocally: "/Projects/" + "To Do List" + "/" + "To Do List" + ".html",
+    hrefLink: "https://kulakash1.netlify.app/Projects/To%20Do%20List/To%20Do%20List.html",
   },
   {
     keyValue: noOfProjects++,
@@ -311,12 +291,13 @@ const projectsmade = [
     description: "Click on the Like Button to make this cute dog Happy...",
     imagePath:
       "./assets/image/Projects/Web Development/Toggle Like and Unlike.jpg",
-    hrefLink:
+    projectPathLocally:
       "/Projects/" +
       "Toggle Like and Unlike" +
       "/" +
       "Toggle Like and Unlike" +
       ".html",
+      hrefLink: "https://kulakash1.netlify.app/Projects/Toggle%20Like%20and%20Unlike/Toggle%20Like%20and%20Unlike.html",
   },
   {
     keyValue: noOfProjects++,
@@ -327,7 +308,8 @@ const projectsmade = [
     description:
       "Click on the desired buttonn to change the traffic light accordingly...",
     imagePath: "./assets/image/Projects/Web Development/Traffic Light.jpg",
-    hrefLink: "/Projects/" + "Traffic Light" + "/" + "Traffic Light" + ".html",
+    projectPathLocally: "/Projects/" + "Traffic Light" + "/" + "Traffic Light" + ".html",
+    hrefLink: "https://kulakash1.netlify.app/Projects/Traffic%20Light/Traffic%20Light.html",
   },
   {
     keyValue: noOfProjects++,
@@ -338,12 +320,13 @@ const projectsmade = [
     description: "Integrated Wikipedia Search with an api",
     imagePath:
       "./assets/image/Projects/Web Development/Wikipedia Search Application.jpg",
-    hrefLink:
+    projectPathLocally:
       "/Projects/" +
       "Wikipedia Search Application" +
       "/" +
       "Wikipedia Search Application" +
       ".html",
+      hrefLink: "https://kulakash1.netlify.app/Projects/Wikipedia%20Search%20Application/Wikipedia%20Search%20Application.html",
   },
   // {
   //   keyValue: noOfProjects++,
@@ -353,7 +336,7 @@ const projectsmade = [
   //   imageName: "",
   //   description: "",
   //   imagePath: "./assets/image/Projects/Web Development/.jpg",
-  //   hrefLink: "/Projects/" + "" + "/" + "" + ".html",
+  //   projectPathLocally: "/Projects/" + "" + "/" + "" + ".html",
   // },
 ];
 
