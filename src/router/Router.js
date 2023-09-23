@@ -3,7 +3,7 @@
 import { Routes, Route } from "react-router-dom";
 import { locations } from "../pages/home/locations.js";
 
-const { Home, About, Achievemnts, TravelDiary, ContactMe, Projects, Navbar1, Footer } = locations;
+const { Home, About, Achievemnts, TravelDiary, ContactMe, Projects, Navbar1, Footer, UnderConstruction } = locations;
 
 const MainPageRoutes = () => {
   return (
@@ -17,6 +17,7 @@ const MainPageRoutes = () => {
         <Route exact path="contactme" element={<ContactMe />} />
         <Route exact path="footer" element={<Footer />} />
         <Route exact path="navbar1" element={<Navbar1 />} />
+        <Route exact path="underconstruction" element={<UnderConstruction />} />
     </Routes>
   );
 };

@@ -6,7 +6,7 @@ import Achievemnts from '../Achievements/Achievements.js'
 import ContactMe from '../Contact Me/Contact Me.js'
 import Projects from '../Projects/projectsPage.js'
 import TravelDiary from '../Travel Diary/Travel Diary.js'
-
+import UnderConstruction from '../Error/Under Construction/Under Construction.js'
 // // import About from './';
 // // import About from './';
 // // import About from './';
@@ -22,5 +22,6 @@ export const locations = {
     ContactMe: ContactMe,
     Projects: Projects,
     TravelDiary: TravelDiary,
+    UnderConstruction: UnderConstruction
   };
 

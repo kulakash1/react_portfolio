@@ -18,228 +18,209 @@ const Achievements = () => {
       {/* NAVBAR */}
       <Navbar1 />
 
-      {/*  <!--=============== Achievements ===============--> */}
-      {/* <!-- <div className="about-me-section pt-5 pb-5">
+      <div className="mainClass">
+        <main>
+          <section className="achievement-section">
+            <h2>Earned Certificates</h2>
 
-        <div className="container">
-            <div className="row">
-                <div className="d-flex flex-column justify-content-center col-12 col-md-6 order-md-2">
-                    <h1 className="main-point mb-3">"Success is not the destination, but the journey itself."</h1>
-                    <h1 className="about-me-section-heading mb-3">This Page is Under Construction.</h1>
-                    <img src="under construction.jpg" className="about-me-section-image d-md-none mb-3" />
-                    <p className="description">Description </p>
+            {earnedCertificates.map((eachItem) => {
+              let id, achievementName, keyName;
+              ({ id, achievementName, keyName } = eachItem);
+
+              const combinedKey = `${keyName} - ${id}`; // Combine id with keyName
+              return (
+                <div>
+                  <h3 key={combinedKey}>{achievementName}</h3>
+                  <div className="certificate-container">
+                    {/* WEB DEV */}
+                    {keyName === "fsWebDev" &&
+                      fsWebDev.map((keyItem) => {
+                        let certificateType;
+                        ({ certificateType } = keyItem);
+                        // certificate type 1,2,3
+                        if (certificateType === 1) {
+                          let keyValue,
+                            certificateTitle,
+                            imageName,
+                            issueDate,
+                            description,
+                            duration,
+                            imagePath,
+                            verificationLink;
+                          ({
+                            keyValue,
+                            certificateTitle,
+                            imageName,
+                            issueDate,
+                            description,
+                            duration,
+                            imagePath,
+                            verificationLink,
+                          } = keyItem);
+                          const valOfKey = `${keyName} - ${keyValue}`; // Combine id with keyName
+
+                          return (
+                            <div
+                              className="certificate"
+                              onclick="showCertificateDetails('{certificateTitle}', '{issueDate}', '{description}', '{duration}', '{imagePath}', '{verificationLink}')"
+                              key={valOfKey}
+                            >
+                              <img src={imagePath} alt={imageName} />
+                              <h3>{certificateTitle}</h3>
+                              <p>Issue Date: {issueDate}</p>
+                              <p>Description: {description}</p>
+                              <p>Duration: {duration}</p>
+                            </div>
+                          );
+                        }
+                        //   }
+                        //   return null; // Return null for non-"home" items
+                      })}
+
+                    {/* Programming Language */}
+                    {keyName === "pLang" &&
+                      pLang.map((keyItem) => {
+                        let certificateType;
+                        ({ certificateType } = keyItem);
+                        // certificate type 1,2,3
+                        if (certificateType === 1) {
+                          let keyValue,
+                            certificateTitle,
+                            imageName,
+                            issueDate,
+                            description,
+                            duration,
+                            imagePath,
+                            verificationLink;
+                          ({
+                            keyValue,
+                            certificateTitle,
+                            imageName,
+                            issueDate,
+                            description,
+                            duration,
+                            imagePath,
+                            verificationLink,
+                          } = keyItem);
+                          const valOfKey = `${keyName} - ${keyValue}`; // Combine id with keyName
+
+                          return (
+                            <div
+                              className="certificate"
+                              onclick="showCertificateDetails('{certificateTitle}', '{issueDate}', '{description}', '{duration}', '{imagePath}', '{verificationLink}')"
+                              key={valOfKey}
+                            >
+                              <img src={imagePath} alt={imageName} />
+                              <h3>{certificateTitle}</h3>
+                              <p>Issue Date: {issueDate}</p>
+                              <p>Description: {description}</p>
+                              <p>Duration: {duration}</p>
+                            </div>
+                          );
+                        }
+                        //   }
+                        //   return null; // Return null for non-"home" items
+                      })}
+
+                    {/* Competitive Programming */}
+                    {keyName === "compProg" &&
+                      compProg.map((keyItem) => {
+                        let certificateType;
+                        ({ certificateType } = keyItem);
+                        // certificate type 1,2,3
+                        if (certificateType === 1) {
+                          let keyValue,
+                            certificateTitle,
+                            imageName,
+                            issueDate,
+                            description,
+                            duration,
+                            imagePath,
+                            verificationLink;
+                          ({
+                            keyValue,
+                            certificateTitle,
+                            imageName,
+                            issueDate,
+                            description,
+                            duration,
+                            imagePath,
+                            verificationLink,
+                          } = keyItem);
+                          const valOfKey = `${keyName} - ${keyValue}`; // Combine id with keyName
+
+                          return (
+                            <div
+                              className="certificate"
+                              onclick="showCertificateDetails('{certificateTitle}', '{issueDate}', '{description}', '{duration}', '{imagePath}', '{verificationLink}')"
+                              key={valOfKey}
+                            >
+                              <img src={imagePath} alt={imageName} />
+                              <h3>{certificateTitle}</h3>
+                              <p>Issue Date: {issueDate}</p>
+                              <p>Description: {description}</p>
+                              <p>Duration: {duration}</p>
+                            </div>
+                          );
+                        }
+                        //   }
+                        //   return null; // Return null for non-"home" items
+                      })}
+
+                    {/* Corporate Compliance */}
+                    {keyName === "corporateCompliance" &&
+                      corporateCompliance.map((keyItem) => {
+                        let certificateType;
+                        ({ certificateType } = keyItem);
+                        // certificate type 1,2,3
+                        if (certificateType === 2) {
+                          let keyValue,
+                            certificateTitle,
+                            imageName,
+                            issueDate,
+                            description,
+                            issuedBy,
+                            imagePath,
+                            certificationNo;
+                          ({
+                            keyValue,
+                            certificateTitle,
+                            imageName,
+                            issueDate,
+                            description,
+                            issuedBy,
+                            imagePath,
+                            certificationNo,
+                          } = keyItem);
+                          const valOfKey = `${keyName} - ${keyValue}`; // Combine id with keyName
+
+                          return (
+                            <div
+                              className="certificate"
+                              onclick="showCertificateDetailsType2('{certificateTitle}', '{issueDate}', '{description}', '{certificationNo}', '{imagePath}', '{issuedBy}')"
+                              key={valOfKey}
+                            >
+                              <img src={imagePath} alt={imageName} />
+                              <h3>{certificateTitle}</h3>
+                              <p>Issue Date: {issueDate}</p>
+                              <p>Description: {description}</p>
+                              <p>Certification No.: {certificationNo}</p>
+                            </div>
+                          );
+                        }
+                        //   }
+                        //   return null; // Return null for non-"home" items
+                      })}
+                  </div>
                 </div>
+              );
+            })}
+          </section>
+        </main>
+      </div>
 
-                <div className="col-12 col-md-6 order-1 order-md-1 d-none d-md-block">
-                    <img src="under construction.jpg" className="about-me-section-image" />
 
-                </div>
-            </div>
-        </div>
-    </div> --> */}
-
-      {/* <!-- ... (Previous HTML code remains the same) ... --> */}
-
-      <main>
-        <section className="achievement-section">
-          <h2>Earned Certificates</h2>
-
-          {earnedCertificates.map((eachItem) => {
-            let id, achievementName, keyName;
-            ({ id, achievementName, keyName } = eachItem);
-
-            const combinedKey = `${keyName} - ${id}`; // Combine id with keyName
-            return (
-              <div>
-                <h3 key={combinedKey}>{achievementName}</h3>
-                <div className="certificate-container">
-                  {/* WEB DEV */}
-                  {keyName === "fsWebDev" &&
-                    fsWebDev.map((keyItem) => {
-                      let certificateType;
-                      ({ certificateType } = keyItem);
-                      // certificate type 1,2,3
-                      if (certificateType === 1) {
-                        let keyValue,
-                          certificateTitle,
-                          imageName,
-                          issueDate,
-                          description,
-                          duration,
-                          imagePath,
-                          verificationLink;
-                        ({
-                          keyValue,
-                          certificateTitle,
-                          imageName,
-                          issueDate,
-                          description,
-                          duration,
-                          imagePath,
-                          verificationLink,
-                        } = keyItem);
-                        const valOfKey = `${keyName} - ${keyValue}`; // Combine id with keyName
-
-                        return (
-                          <div
-                            className="certificate"
-                            onclick="showCertificateDetails('{certificateTitle}', '{issueDate}', '{description}', '{duration}', '{imagePath}', '{verificationLink}')"
-                            key={valOfKey}
-                          >
-                            <img src={imagePath} alt={imageName} />
-                            <h3>{certificateTitle}</h3>
-                            <p>Issue Date: {issueDate}</p>
-                            <p>Description: {description}</p>
-                            <p>Duration: {duration}</p>
-                          </div>
-                        );
-                      }
-                      //   }
-                      //   return null; // Return null for non-"home" items
-                    })}
-
-                  {/* Programming Language */}
-                  {keyName === "pLang" &&
-                    pLang.map((keyItem) => {
-                      let certificateType;
-                      ({ certificateType } = keyItem);
-                      // certificate type 1,2,3
-                      if (certificateType === 1) {
-                        let keyValue,
-                          certificateTitle,
-                          imageName,
-                          issueDate,
-                          description,
-                          duration,
-                          imagePath,
-                          verificationLink;
-                        ({
-                          keyValue,
-                          certificateTitle,
-                          imageName,
-                          issueDate,
-                          description,
-                          duration,
-                          imagePath,
-                          verificationLink,
-                        } = keyItem);
-                        const valOfKey = `${keyName} - ${keyValue}`; // Combine id with keyName
-
-                        return (
-                          <div
-                            className="certificate"
-                            onclick="showCertificateDetails('{certificateTitle}', '{issueDate}', '{description}', '{duration}', '{imagePath}', '{verificationLink}')"
-                            key={valOfKey}
-                          >
-                            <img src={imagePath} alt={imageName} />
-                            <h3>{certificateTitle}</h3>
-                            <p>Issue Date: {issueDate}</p>
-                            <p>Description: {description}</p>
-                            <p>Duration: {duration}</p>
-                          </div>
-                        );
-                      }
-                      //   }
-                      //   return null; // Return null for non-"home" items
-                    })}
-
-                  {/* Competitive Programming */}
-                  {keyName === "compProg" &&
-                    compProg.map((keyItem) => {
-                      let certificateType;
-                      ({ certificateType } = keyItem);
-                      // certificate type 1,2,3
-                      if (certificateType === 1) {
-                        let keyValue,
-                          certificateTitle,
-                          imageName,
-                          issueDate,
-                          description,
-                          duration,
-                          imagePath,
-                          verificationLink;
-                        ({
-                          keyValue,
-                          certificateTitle,
-                          imageName,
-                          issueDate,
-                          description,
-                          duration,
-                          imagePath,
-                          verificationLink,
-                        } = keyItem);
-                        const valOfKey = `${keyName} - ${keyValue}`; // Combine id with keyName
-
-                        return (
-                          <div
-                            className="certificate"
-                            onclick="showCertificateDetails('{certificateTitle}', '{issueDate}', '{description}', '{duration}', '{imagePath}', '{verificationLink}')"
-                            key={valOfKey}
-                          >
-                            <img src={imagePath} alt={imageName} />
-                            <h3>{certificateTitle}</h3>
-                            <p>Issue Date: {issueDate}</p>
-                            <p>Description: {description}</p>
-                            <p>Duration: {duration}</p>
-                          </div>
-                        );
-                      }
-                      //   }
-                      //   return null; // Return null for non-"home" items
-                    })}
-
-                  {/* Corporate Compliance */}
-                  {keyName === "corporateCompliance" &&
-                    corporateCompliance.map((keyItem) => {
-                      let certificateType;
-                      ({ certificateType } = keyItem);
-                      // certificate type 1,2,3
-                      if (certificateType === 2) {
-                        let keyValue,
-                          certificateTitle,
-                          imageName,
-                          issueDate,
-                          description,
-                          issuedBy,
-                          imagePath,
-                          certificationNo;
-                        ({
-                          keyValue,
-                          certificateTitle,
-                          imageName,
-                          issueDate,
-                          description,
-                          issuedBy,
-                          imagePath,
-                          certificationNo,
-                        } = keyItem);
-                        const valOfKey = `${keyName} - ${keyValue}`; // Combine id with keyName
-
-                        return (
-                          <div
-                            className="certificate"
-                            onclick="showCertificateDetailsType2('{certificateTitle}', '{issueDate}', '{description}', '{certificationNo}', '{imagePath}', '{issuedBy}')"
-                            key={valOfKey}
-                          >
-                            <img src={imagePath} alt={imageName} />
-                            <h3>{certificateTitle}</h3>
-                            <p>Issue Date: {issueDate}</p>
-                            <p>Description: {description}</p>
-                            <p>Certification No.: {certificationNo}</p>
-                          </div>
-                        );
-                      }
-                      //   }
-                      //   return null; // Return null for non-"home" items
-                    })}
-                </div>
-              </div>
-            );
-          })}
-
-        </section>
-      </main>
-
+      
       {/* // Modal Part  Commented*/}
       {/* <!-- ... (Remaining HTML code remains the same) ... --> */}
       {/*<div className="modal" id="certificateModal">
