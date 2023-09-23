@@ -7,21 +7,6 @@
 //   imagePath,
 //   projectPathLocally;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let noOfProjects = 1;
 
 const projectsmade = [
@@ -34,12 +19,15 @@ const projectsmade = [
     description: "Answer the correct sum for 2 two-digit numbers...",
     // imagePath: "./assets/image/Projects/Web Development/"+{imageName}+".jpg",
     imagePath: "./assets/image/Projects/Web Development/Answer Correct Sum.jpg",
+    // {`${imageBasePath}/${city}/${imageURL}`}
     projectPathLocally:
-      "/Projects/" +
-      "Answer Correct Sum" +
-      "/" +
-      "Answer Correct Sum" +
-      ".html",
+      "./Projects/Answer Correct Sum/Answer Correct Sum.html",
+    // hrefLink:
+    //   "./Projects/" +
+    //   "Answer Correct Sum" +
+    //   "/" +
+    //   "Answer Correct Sum" +
+    //   ".html",
       hrefLink: "https://kulakash1.netlify.app/projects/answer%20correct%20sum%20-%20game/answer%20correct%20sum",
   },
   {
